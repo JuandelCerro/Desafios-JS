@@ -23,7 +23,7 @@ do {
     } else if (producto == "TOTAL") {
         total = total;
     } else {
-        alert("Lo siento, no ingreso ningun producto")
+        alert("No ingreso ningun producto, vuelva a intentar")
     }
 
 } while (producto != "TOTAL");
