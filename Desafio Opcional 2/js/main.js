@@ -10,7 +10,7 @@ const producto2 = new Producto("Almohadones", 500);
 const producto3 = new Producto("Conejo de Ceramica", 700);
 const producto4 = new Producto("Conejo con Luz", 1000);
 const producto5 = new Producto("Conejos Tejidos", 500);
-const producto6 = new Producto("Kit Creativos", 1000);
+const producto6 = new Producto("Kit Creativo", 1000);
 const producto7 = new Producto("Marineras", 600);
 const producto8 = new Producto("Mochila de Peluche", 1200);
 const producto9 = new Producto("Mochila con Brillo", 1200);
@@ -28,6 +28,11 @@ function sumar(precio, cant) {
 do {
     compra = prompt('Que productos desea comprar?\n\nAlmohadon y Antifaz  -  Almohadones\nConejo de Ceramica  -  Conejo con Luz  -  Conejos Tejidos\nKit Creativo  -  Marineras\nMochila de Peluche  -  Mochila con Brillo\n\nIngrese TOTAL cuando haya finalizado\n');
     if (compra != 'TOTAL') {
+        let existeProducto = productos.some((producto) => compra === producto.nombre)
+        if (existeProducto === false) {
+            alert("No existe el producto ingresado, vuelva a intentar")
+            continue          
+        }
         cantidad = prompt('Cuantos quiere comprar?\n')
 
         if (compra == "Almohadon y Antifaz") {
@@ -51,7 +56,7 @@ do {
         } else if (compra == "TOTAL") {
             total = total;
         } else {
-            alert("No ingreso ningun producto, vuelva a intentar")
+            alert("No existe el producto ingresado, vuelva a intentar")
         }
     }
 } while (compra != "TOTAL");
