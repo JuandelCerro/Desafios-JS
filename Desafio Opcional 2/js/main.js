@@ -28,12 +28,12 @@ function sumar(precio, cant) {
 do {
     compra = prompt('Que productos desea comprar?\n\nAlmohadon y Antifaz  -  Almohadones\nConejo de Ceramica  -  Conejo con Luz  -  Conejos Tejidos\nKit Creativo  -  Marineras\nMochila de Peluche  -  Mochila con Brillo\n\nIngrese TOTAL cuando haya finalizado\n');
     if (compra != 'TOTAL') {
-        let existeProducto = productos.some((producto) => compra === producto.nombre)
+        let existeProducto = productos.some((producto) => compra === producto.nombre);
         if (existeProducto === false) {
-            alert("No existe el producto ingresado, vuelva a intentar")
-            continue          
+            alert("No existe el producto ingresado, vuelva a intentar");
+            continue
         }
-        cantidad = prompt('Cuantos quiere comprar?\n')
+        cantidad = prompt('Cuantos quiere comprar?\n');
 
         if (compra == "Almohadon y Antifaz") {
             sumar(producto1.precio);
